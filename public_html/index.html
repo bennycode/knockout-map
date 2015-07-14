@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-debug.js"></script>
+    <script src="js/ko.observableDictionary.js"></script>
+    <script src="js/ko.observableMap.js"></script>
+  </head>
+  <body>
+    <div>TODO write content!</div>
+    <script>
+      var a = ko.observableMap();
+      a.set('a', 1);
+      a.set('a', 2);
+      a.set('b', 3);
+      console.log(a.get('a')); // 2
+      console.log(a.get('b')); // 3
+    </script>
+  </body>
+</html>
