@@ -43,7 +43,9 @@
             }
           }
         },
-        subscribe: values.subscribe
+        subscribe: function (callback) {
+          return values.subscribe(callback);
+        }
       };
     };
   }

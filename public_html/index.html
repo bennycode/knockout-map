@@ -11,12 +11,17 @@
   <body>
     <div>TODO write content!</div>
     <script>
-      var a = ko.observableMap();
-      a.set('a', 1);
-      a.set('a', 2);
-      a.set('b', 3);
-      console.log(a.get('a')); // 2
-      console.log(a.get('b')); // 3
+      var map = ko.observableMap();
+      map.subscribe(function (newValue) {
+        console.log('New contents: ' + newValue);
+      });
+
+      map.set('a', 1);
+      map.set('a', 2);
+      map.set('b', 3);
+
+      console.log(map.get('a')); // 2
+      console.log(map.get('b')); // 3
     </script>
   </body>
 </html>
